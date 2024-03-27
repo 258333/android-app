@@ -24,7 +24,9 @@ public class ExampleUnitTest {
         records = recordDao.findRecord();
         for (int i = 0; i < records.size(); i++) {
             record += records.get(i).toString();
+            System.out.println(record);
         }
+        System.out.println("-----------------------");
         System.out.println(record);
     }
 }
