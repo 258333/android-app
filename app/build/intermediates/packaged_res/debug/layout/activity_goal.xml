@@ -1,0 +1,44 @@
+<!-- activity_learning_goals.xml -->
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <!-- Header Section -->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每周学习目标"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" android:layout_marginTop="16dp" android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" android:layout_marginBottom="16dp"
+            android:layout_gravity="center"/>
+
+    <!-- Input Fields -->
+
+    <EditText
+            android:id="@+id/ed_goal"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:hint="Goal Description"
+            android:layout_margin="16dp"/>
+
+    <DatePicker
+            android:id="@+id/dp_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"/>
+    <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:layout_margin="16dp"/>
+
+
+</LinearLayout>
+

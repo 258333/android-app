@@ -1,0 +1,92 @@
+<!-- activity_daily_learning_record.xml -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Header Section -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:text="每日学习记录"
+        android:textSize="20sp" />
+
+    <!-- Input Fields -->
+    <TextView
+        android:id="@+id/textViewStartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_margin="16dp"
+        android:text="开始时间" />
+
+    <TimePicker
+        android:id="@+id/tp_time_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewStartTime"
+        android:layout_marginTop="-15dp"
+        android:tag="start"
+        android:timePickerMode="spinner" />
+
+    <TextView
+        android:id="@+id/textViewEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tp_time_start"
+        android:layout_margin="16dp"
+        android:text="结束时间" />
+
+    <TimePicker
+        android:id="@+id/tp_time_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewEndTime"
+        android:tag="end"
+        android:timePickerMode="spinner" />
+
+    <EditText
+        android:id="@+id/editTextLearningRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tp_time_end"
+        android:layout_margin="16dp"
+        android:hint="每日学习记录" />
+
+    <!-- Functionality Options -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/editTextLearningRecord">
+
+        <Button
+            android:id="@+id/buttonSaveRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextLearningRecord"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="保存学习记录" />
+
+<!--        <Button-->
+<!--            android:id="@+id/butSure"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/buttonSaveRecord"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:text="" />-->
+    </LinearLayout>
+</RelativeLayout>
