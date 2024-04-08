@@ -11,19 +11,22 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.app_02.entity.Record;
 import com.example.app_02.utils.RecordDao;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class FirstPageActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    private String record;
+    //    private String record;
     private TextView tvRecord;
-
+    TextView tvAnalyse;
+    TextView tvGoal;
     private SharedPreferences sharedPreferences;
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
@@ -35,15 +38,19 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
         findViewById(R.id.btnGoal).setOnClickListener(this);
         findViewById(R.id.btnRecord).setOnClickListener(this);
         findViewById(R.id.btnAnalyse).setOnClickListener(this);
+        findViewById(R.id.btnClear).setOnClickListener(this);
+        findViewById(R.id.btnDelete).setOnClickListener(this);
 
-        TextView tvGoal = findViewById(R.id.tvGoal);
+
+        tvGoal = findViewById(R.id.tvGoal);
         tvRecord = findViewById(R.id.tvRecord);
+        tvAnalyse = findViewById(R.id.tvAnalyse);
 
         sharedPreferences = getSharedPreferences("goal", Context.MODE_PRIVATE);
         String goalDate = sharedPreferences.getString("goalDate", "");
         String goal = sharedPreferences.getString("goal", "");
 
-        tvGoal.setText(goalDate + " : " + goal);
+        tvGoal.setText(goalDate + goal);
 
         sharedPreferences = getSharedPreferences("record", Context.MODE_PRIVATE);
         tvRecord.setText(sharedPreferences.getString("record", ""));
@@ -119,9 +126,9 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
 //        }).start();
 
 
-        TextView tvAnalyse = findViewById(R.id.tvAnalyse);
-        SharedPreferences sharedPreferences = getSharedPreferences("analyse", MODE_PRIVATE);
-        tvAnalyse.setText(sharedPreferences.getString("analyse", ""));
+//        TextView tvAnalyse = findViewById(R.id.tvAnalyse);
+//        SharedPreferences sharedPreferences = getSharedPreferences("analyse", MODE_PRIVATE);
+//        tvAnalyse.setText(sharedPreferences.getString("analyse", ""));
     }
 
 //    public void findAll() {
@@ -148,9 +155,53 @@ public class FirstPageActivity extends AppCompatActivity implements View.OnClick
         } else if (i == R.id.btnRecord) {
             Intent intent = new Intent(this, RecordActivity.class);
             startActivity(intent);
+        } else if (i == R.id.btnAnalyse) {
+            new Thread(new Runnable() {
+                @SuppressLint("SetTextI18n")
+                @Override
+                public void run() {
+                    RecordDao recordDao = new RecordDao();
+                    int time;
+                    try {
+                        time = recordDao.sumTime(sharedPreferences.getInt("n", 0));
+                    } catch (SQLException e) {
+                        throw new RuntimeException(e);
+                    }
+
+                    // 在新线程中更新UI
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (time == 0) {
+                                tvAnalyse.setText("还没有学习记录");
+                            } else if (time > 0 && time < 5) {
+                                tvAnalyse.setText("6");
+                            } else if (time < 10) {
+                                tvAnalyse.setText("7");
+                            } else if (time < 15) {
+                                tvAnalyse.setText("8");
+                            } else if (time < 20) {
+                                tvAnalyse.setText("9");
+                            } else {
+                                tvAnalyse.setText("10");
+                            }
+                        }
+                    });
+                }
+            }).start();
+
+        } else if (i == R.id.btnClear) {
+            tvRecord.setText("");
+            sharedPreferences = getSharedPreferences("record", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();//获取编辑器对象
+            editor.clear();
+            editor.apply();
         } else {
-            Intent intent = new Intent(this, AnalyseActivity.class);
-            startActivity(intent);
+            tvGoal.setText("");
+            sharedPreferences = getSharedPreferences("goal", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.clear();
+            editor.apply();
         }
     }
 }

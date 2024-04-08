@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bg3"
+    android:padding="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/list_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="起始站"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp" />
+    <TextView
+        android:id="@+id/list_mid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="---"
+        android:textSize="18dp"
+        android:layout_toRightOf="@+id/list_1"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        />
+    <TextView
+        android:id="@+id/list_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/list_mid"
+        android:text="终点站"
+        android:textSize="18dp"
+        android:textColor="@color/black" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_below="@id/list_1"
+        android:layout_marginTop="2dp"/>
+    <TextView
+        android:id="@+id/list_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:layout_toRightOf="@id/list_2"
+        android:layout_marginTop="5dp"
+        android:text="经过站数"
+        android:layout_marginLeft="20dp"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/list_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/list_3"
+        android:textSize="18dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="路线"
+        android:textColor="@color/black" />
+
+
+</RelativeLayout>

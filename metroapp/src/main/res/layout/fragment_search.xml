@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:background="@drawable/bg_bg1"
+    tools:context=".fragment.frag1.SearchFragment">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="      路  线  查  询"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="160dp"
+        android:textSize="21dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="    起始站"
+        android:textSize="20dp"
+        android:background="@drawable/bg_edit"
+        android:id="@+id/frag_et_start"
+        android:layout_marginTop="45sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="100dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="    终点站"
+        android:background="@drawable/bg_edit"
+        android:textSize="20sp"
+        android:id="@+id/frag_et_end"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="100dp"
+        />
+    <ImageButton
+        android:id="@+id/frag_btn_find"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="330dp"
+        android:background="@mipmap/button_find"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="165dp"
+        android:background="@color/gray"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/frag_recycle_show"
+        android:layout_width="match_parent"
+        android:layout_height="453dp"
+        android:layout_marginTop="170dp" />
+
+
+</FrameLayout>

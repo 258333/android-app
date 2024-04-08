@@ -5,6 +5,19 @@ public class Record {
     private String endTime;
     private String record;
 
+    private int time;
+
+    public int getTime() {
+        return time;
+    }
+
+    public Record(String startTime, String endTime, String record, int time) {
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.record = record;
+        this.time = time;
+    }
+
     public Record() {
     }
 

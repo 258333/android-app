@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bg1"
+    tools:context=".fragment.frag3.MapFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/map_et_1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:hint="  输入站点"
+        android:textSize="20dp"
+        android:background="@drawable/bg_edit"
+        android:layout_marginTop="67dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="100dp"
+        android:padding="1dp"
+        />
+    <ImageButton
+        android:id="@+id/map_btn_1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="330dp"
+        android:background="@mipmap/button_find"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray"
+        android:layout_marginTop="150dp"
+        />
+
+    <TextView
+        android:id="@+id/map_tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginRight="0dp"
+        android:paddingLeft="40dp"
+        android:background="@drawable/bg_bg3"
+        android:text=" "
+        android:textSize="30dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="395dp"
+        android:layout_marginTop="215dp"
+        android:src="@mipmap/pic_dite" />
+
+</FrameLayout>

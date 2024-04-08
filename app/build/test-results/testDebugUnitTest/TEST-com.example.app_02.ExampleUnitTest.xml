@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.app_02.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-26T08:20:18" hostname="L" time="0.467">
+<testsuite name="com.example.app_02.ExampleUnitTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-03T12:26:03" hostname="L" time="0.137">
   <properties/>
-  <testcase name="test" classname="com.example.app_02.ExampleUnitTest" time="0.467"/>
-  <system-out><![CDATA[startTime: 1, endTime: 1
-record: 1
-
+  <testcase name="Test1" classname="com.example.app_02.ExampleUnitTest" time="0.137"/>
+  <system-out><![CDATA[11112123
+15
+123231
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

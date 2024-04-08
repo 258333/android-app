@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/teal_700"
+        >
+
+        <LinearLayout
+            android:id="@+id/menu_ll_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/menu_iv_1"
+                android:src="@drawable/selector_search"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu_tv_1"
+                android:textSize="20sp"
+                android:text="查询"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_ll_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/menu_iv_2"
+                android:src="@drawable/selector_subway"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu_tv_2"
+                android:textSize="20sp"
+                android:text="站点"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu_ll_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/menu_iv_3"
+                android:src="@drawable/selector_map"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu_tv_3"
+                android:textSize="20sp"
+                android:text="地图"/>
+        </LinearLayout>
+
+</LinearLayout>

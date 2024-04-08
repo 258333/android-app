@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "app_02"
 include(":app")
- 
+include(":metroapp")

@@ -1,19 +1,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@drawable/img_2"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnGoal"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="设置本周计划" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnRecord"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="今日学习记录" />
+        <Button
+            android:id="@+id/btnGoal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="设置本周计划" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="清除上次计划" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -24,8 +34,28 @@
         android:id="@+id/tvGoal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="#999999"
-        android:background="@drawable/shape_round_rectangle"/>
+        android:background="@drawable/shape_round_rectangle_1"
+        android:textColorHint="#999999" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRecord"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="今日学习记录" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="清空学习记录" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
@@ -36,8 +66,8 @@
         android:id="@+id/tvRecord"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="#999999"
-        android:background="@drawable/shape_round_rectangle"/>
+        android:background="@drawable/shape_round_rectangle_1"
+        android:textColorHint="#999999" />
 
     <Button
         android:id="@+id/btnAnalyse"
@@ -49,11 +79,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="能力达标分析:" />
+
     <TextView
         android:id="@+id/tvAnalyse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/shape_round_rectangle_1"
         android:textColorHint="#999999"
-        android:background="@drawable/shape_round_rectangle"/>
+        tools:ignore="TextViewEdits" />
 
 </LinearLayout>

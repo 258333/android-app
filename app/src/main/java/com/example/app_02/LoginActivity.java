@@ -434,15 +434,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                     @Override
                                     public void run() {
                                         String record = "";
+                                        sharedPreferences = getSharedPreferences("record", Context.MODE_PRIVATE);
                                         ArrayList<Record> records = new ArrayList<>();
                                         RecordDao recordDao = new RecordDao();
-                                        records = recordDao.findRecord();
+                                        records = recordDao.findRecord(sharedPreferences.getInt("n", 0));
                                         for (int i = 0; i < records.size(); i++) {
                                             record += records.get(i).toString();
                                         }
-                                        sharedPreferences = getSharedPreferences("record", Context.MODE_PRIVATE);
+
                                         SharedPreferences.Editor editor = sharedPreferences.edit();//获取编辑器对象
                                         editor.putString("record", record);
+                                        editor.putInt("n", sharedPreferences.getInt("n", 0));
                                         editor.apply();
                                     }
                                 }).start();

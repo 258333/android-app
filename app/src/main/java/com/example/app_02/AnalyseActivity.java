@@ -1,5 +1,11 @@
 package com.example.app_02;
 
+
+/*
+        弃用 弃用 弃用
+ */
+
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;

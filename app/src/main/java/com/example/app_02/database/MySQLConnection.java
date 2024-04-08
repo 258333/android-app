@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 
 public class MySQLConnection {
     //要连接MySQL数据库的URL    URL_MySQL="jdbc:mysql://外网地址:端口/数据库名称"
-    public static final String URL_MySQL="jdbc:mysql://:/:/:?useSSL=false";
+    public static final String URL_MySQL="jdbc:mysql://:/:?useSSL=false";
     //要连接MySQL数据库的用户名  NAME_MySQL="MySQL用户名"
     public static final String NAME_MySQL=":";
     //要连接MySQL数据库的密码    PASSWORD_MySQL="MySQL密码"
